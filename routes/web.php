@@ -2,7 +2,7 @@
 
 /** @var \Laravel\Lumen\Routing\Router $router */
 
-use App\Articles\Article;
+use App\Contents\MDCMS;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +17,4 @@ use App\Articles\Article;
 
 $router->get('/', fn () => view('home'));
 
-$router->get('/articles/{slug}',
-    fn ($slug) => view('articles',[
-        'article' => new Article($slug)
-    ])
-);
+MDCMS::initialize($router);

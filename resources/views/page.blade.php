@@ -1,5 +1,5 @@
 @extends('layouts.default')
 
 @section('content')
-    {!! $article->body->getHtml() !!}
+    {!! $page->body->getHtml() !!}
 @endsection

@@ -1,6 +1,6 @@
 <?php
 
-use App\Articles\Articles;
+use App\Contents\Articles;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 
 class TestArticle extends TestCase

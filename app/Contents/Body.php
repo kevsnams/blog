@@ -1,8 +1,9 @@
 <?php
-namespace App\Articles;
+declare(strict_types=1);
+
+namespace App\Contents;
 
 use Illuminate\Contracts\Support\Arrayable;
-use League\CommonMark\CommonMarkConverter;
 use League\CommonMark\Environment\Environment;
 use League\CommonMark\Extension\Attributes\AttributesExtension;
 use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
@@ -27,7 +28,7 @@ class Body implements Arrayable
 
         $converter = new MarkdownConverter($environment);
 
-        $this->parsed = $converter->convertToHtml($this->raw);
+        $this->parsed =(string) $converter->convertToHtml($this->raw);
     }
 
     public function getMarkdown() : string

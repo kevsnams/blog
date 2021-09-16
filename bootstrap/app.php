@@ -115,6 +115,4 @@ $app->router->group([
 
 $app->withFacades();
 
-// $app->withEloquent();
-
 return $app;
